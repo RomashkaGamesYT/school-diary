@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Школьный Дневник</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <!-- Здесь может быть логотип школы -->
+                <!-- <img src="images/logo.png" alt="Логотип школы"> -->
+                <h1>Школьный Дневник</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#schedule">Расписание</a></li>
+                    <li><a href="#homework">Домашние задания</a></li>
+                    <li><a href="#grades">Оценки</a></li>
+                    <li><a href="#news">Новости</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Главная страница -->
+        <section id="home" class="page-section">
+            <h2>Добро пожаловать в Ваш Школьный Дневник!</h2>
+            <p>Здесь вы найдете всю необходимую информацию об учебном процессе: расписание уроков, домашние задания, оценки, важные объявления и многое другое.</p>
+            <div class="quick-access">
+                <h3>Быстрый доступ:</h3>
+                <ul>
+                    <li><a href="#schedule">Посмотреть расписание</a></li>
+                    <li><a href="#homework">Проверить домашние задания</a></li>
+                    <li><a href="#grades">Узнать свои оценки</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Раздел "Расписание" -->
+        <section id="schedule" class="page-section">
+            <h2>Расписание Уроков</h2>
+            <div class="schedule-nav">
+                <button class="active" data-day="monday">Понедельник</button>
+                <button data-day="tuesday">Вторник</button>
+                <button data-day="wednesday">Среда</button>
+                <button data-day="thursday">Четверг</button>
+                <button data-day="friday">Пятница</button>
+                <button data-day="saturday">Суббота</button>
+            </div>
+            <div class="schedule-table-wrapper">
+                <table class="schedule-table" id="monday-schedule">
+                    <thead>
+                        <tr>
+                            <th>Время</th>
+                            <th>Предмет</th>
+                            <th>Кабинет</th>
+                            <th>Преподаватель</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>08:30 - 09:15</td>
+                            <td>Математика</td>
+                            <td>301</td>
+                            <td>Иванова А.И.</td>
+                        </tr>
+                        <tr>
+                            <td>09:25 - 10:10</td>
+                            <td>Русский язык</td>
+                            <td>210</td>
+                            <td>Петрова М.В.</td>
+                        </tr>
+                        <tr>
+                            <td>10:20 - 11:05</td>
+                            <td>Литература</td>
+                            <td>215</td>
+                            <td>Смирнова Е.П.</td>
+                        </tr>
+                        <tr>
+                            <td>11:15 - 12:00</td>
+                            <td>Физическая культура</td>
+                            <td>Спортзал</td>
+                            <td>Сидоров В.Н.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- Другие дни недели будут скрыты по умолчанию и показываться при клике -->
+                <table class="schedule-table hidden" id="tuesday-schedule">
+                    <thead>
+                        <tr>
+                            <th>Время</th>
+                            <th>Предмет</th>
+                            <th>Кабинет</th>
+                            <th>Преподаватель</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>08:30 - 09:15</td>
+                            <td>История</td>
+                            <td>105</td>
+                            <td>Кузнецов Д.А.</td>
+                        </tr>
+                        <tr>
+                            <td>09:25 - 10:10</td>
+                            <td>Английский язык</td>
+                            <td>305</td>
+                            <td>Уилсон Дж.</td>
+                        </tr>
+                        <!-- ... другие уроки вторника ... -->
+                    </tbody>
+                </table>
+                <table class="schedule-table hidden" id="wednesday-schedule">
+                    <thead>
+                        <tr>
+                            <th>Время</th>
+                            <th>Предмет</th>
+                            <th>Кабинет</th>
+                            <th>Преподаватель</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>08:30 - 09:15</td>
+                            <td>Биология</td>
+                            <td>201</td>
+                            <td>Федорова О.С.</td>
+                        </tr>
+                        <!-- ... другие уроки среды ... -->
+                    </tbody>
+                </table>
+                <table class="schedule-table hidden" id="thursday-schedule">
+                    <thead>
+                        <tr>
+                            <th>Время</th>
+                            <th>Предмет</th>
+                            <th>Кабинет</th>
+                            <th>Преподаватель</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>08:30 - 09:15</td>
+                            <td>Химия</td>
+                            <td>110</td>
+                            <td>Лебедев П.Р.</td>
+                        </tr>
+                        <!-- ... другие уроки четверга ... -->
+                    </tbody>
+                </table>
+                <table class="schedule-table hidden" id="friday-schedule">
+                    <thead>
+                        <tr>
+                            <th>Время</th>
+                            <th>Предмет</th>
+                            <th>Кабинет</th>
+                            <th>Преподаватель</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>08:30 - 09:15</td>
+                            <td>Информатика</td>
+                            <td>308</td>
+                            <td>Соколов М.Е.</td>
+                        </tr>
+                        <!-- ... другие уроки пятницы ... -->
+                    </tbody>
+                </table>
+                <table class="schedule-table hidden" id="saturday-schedule">
+                    <thead>
+                        <tr>
+                            <th>Время</th>
+                            <th>Предмет</th>
+                            <th>Кабинет</th>
+                            <th>Преподаватель</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>09:00 - 09:45</td>
+                            <td>Кружок "Робототехника"</td>
+                            <td>308</td>
+                            <td>Соколов М.Е.</td>
+                        </tr>
+                        <!-- ... другие уроки субботы (если есть) ... -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Раздел "Домашние задания" -->
+        <section id="homework" class="page-section">
+            <h2>Домашние Задания</h2>
+            <!-- В реальном приложении здесь был бы динамический список,
+                 который заполняется из базы данных.
+                 Для примера, создадим статичный список. -->
+            <div class="homework-list">
+                <div class="homework-item">
+                    <h3>Математика</h3>
+                    <p><strong>Дата сдачи:</strong> 25.10.2023</p>
+                    <p><strong>Задание:</strong> Решить задачи №15, №18, №22 из учебника.</p>
+                    <div class="homework-actions">
+                        <button>Редактировать</button>
+                        <button class="delete">Удалить</button>
+                    </div>
+                </div>
+                <div class="homework-item">
+                    <h3>Русский язык</h3>
+                    <p><strong>Дата сдачи:</strong> 26.10.2023</p>
+                    <p><strong>Задание:</strong> Написать сочинение на тему "Моя любимая книга" (не менее 200 слов).</p>
+                    <div class="homework-actions">
+                        <button>Редактировать</button>
+                        <button class="delete">Удалить</button>
+                    </div>
+                </div>
+                <div class="homework-item">
+                    <h3>Английский язык</h3>
+                    <p><strong>Дата сдачи:</strong> 27.10.2023</p>
+                    <p><strong>Задание:</strong> Выучить новую лексику по теме "Путешествия" (словарь на стр. 50).</p>
+                    <div class="homework-actions">
+                        <button>Редактировать</button>
+                        <button class="delete">Удалить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="add-homework">
+                <h3>Добавить новое задание</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="homework-subject">Предмет:</label>
+                        <input type="text" id="homework-subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="homework-date">Дата сдачи:</label>
+                        <input type="date" id="homework-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="homework-task">Задание:</label>
+                        <textarea id="homework-task" rows="4" required></textarea>
+                    </div>
+                    <button type="submit">Добавить задание</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Раздел "Оценки" -->
+        <section id="grades" class="page-section">
+            <h2>Оценки</h2>
+            <div class="grades-overview">
+                <h3>Общий средний балл: <span class="average-grade">4.5</span></h3>
+                <p>Учебный период: 1 четверть</p>
+            </div>
+            <div class="grades-table-wrapper">
+                <table class="grades-table">
+                    <thead>
+                        <tr>
+                            <th>Предмет</th>
+                            <th>Оценки</th>
+                            <th>Средний балл по предмету</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Математика</td>
+                            <td>5, 4, 5, 3, 4</td>
+                            <td>4.2</td>
+                        </tr>
+                        <tr>
+                            <td>Русский язык</td>
+                            <td>5, 5, 4, 5</td>
+                            <td>4.75</td>
+                        </tr>
+                        <tr>
+                            <td>Литература</td>
+                            <td>4, 4, 5, 4</td>
+                            <td>4.25</td>
+                        </tr>
+                        <tr>
+                            <td>Физическая культура</td>
+                            <td>5, 5, 5</td>
+                            <td>5.0</td>
+                        </tr>
+                        <tr>
+                            <td>История</td>
+                            <td>4, 3, 4</td>
+                            <td>3.67</td>
+                        </tr>
+                        <!-- ... другие предметы ... -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="grades-visualizations">
+                <h3>Визуализация оценок</h3>
+                <div class="chart-container">
+                    <!-- Здесь можно было бы вставить SVG-графики или использовать JS-библиотеки,
+                         но для чистого HTML/CSS, это будет placeholder. -->
+                    <div class="placeholder-chart">
+                        <p>График прогресса (в разработке)</p>
+                        <!-- Пример простого текстового представления -->
+                        <pre>
+Математика:  ----*----
+Русский язык: ----**---
+Литература:  ----*----
+Физическая:  *****----
+История:     ---*-----
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Раздел "Новости и объявления" -->
+        <section id="news" class="page-section">
+            <h2>Новости и Объявления</h2>
+            <div class="news-list">
+                <article class="news-item">
+                    <h3>Уважаемые родители!</h3>
+                    <p class="date">23.10.2023</p>
+                    <p>Информируем вас о том, что родительское собрание состоится 27 октября в 18:00 в актовом зале.</p>
+                    <a href="#">Подробнее...</a>
+                </article>
+                <article class="news-item">
+                    <h3>Каникулы</h3>
+                    <p class="date">15.10.2023</p>
+                    <p>Осенние каникулы пройдут с 30 октября по 5 ноября. Желаем всем приятного отдыха!</p>
+                    <a href="#">Подробнее...</a>
+                </article>
+                <article class="news-item">
+                    <h3>Олимпиада по физике</h3>
+                    <p class="date">10.10.2023</p>
+                    <p>Объявлен старт регистрации на школьную олимпиаду по физике. Подробности в разделе "Мероприятия".</p>
+                    <a href="#">Подробнее...</a>
+                </article>
+            </div>
+            <!-- Добавление новых новостей без редактирования кода:
+                 В реальной системе это было бы реализовано через админ-панель или базу данных.
+                 Здесь для примера можно представить форму, но без JS она не будет работать.
+                 Для чистого HTML/CSS, мы просто показываем, где такие элементы могут быть. -->
+            <div class="add-news-placeholder">
+                <h3>Добавить новость (админ-панель)</h3>
+                <p>В реальной системе здесь будет форма для добавления новостей, доступная авторизованным пользователям.</p>
+            </div>
+        </section>
+
+        <!-- Раздел "Контакты" -->
+        <section id="contacts" class="page-section">
+            <h2>Контакты</h2>
+            <div class="contact-info">
+                <h3>Контактная информация школы</h3>
+                <p><strong>Адрес:</strong> ул. Школьная, д. 1, г. Город, 123456</p>
+                <p><strong>Телефон:</strong> +7 (XXX) XXX-XX-XX</p>
+                <p><strong>Email:</strong> info@school.ru</p>
+                <p><strong>Режим работы:</strong> Пн-Пт, 08:00 - 18:00</p>
+            </div>
+
+            <div class="feedback-form">
+                <h3>Форма обратной связи</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Ваш Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Тема:</label>
+                        <input type="text" id="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Сообщение:</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Отправить сообщение</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Школьный Дневник. Все права защищены.</p>
+            <!-- Дополнительные элементы футера, например, ссылки на соцсети -->
+        </div>
+    </footer>
+
+    <!-- JavaScript для переключения расписания (без JS не обойтись для интерактивности) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dayButtons = document.querySelectorAll('.schedule-nav button');
+            const scheduleTables = document.querySelectorAll('.schedule-table');
+
+            dayButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Снять класс 'active' со всех кнопок
+                    dayButtons.forEach(btn => btn.classList.remove('active'));
+                    // Добавить класс 'active' к текущей кнопке
+                    this.classList.add('active');
+
+                    // Скрыть все таблицы расписания
+                    scheduleTables.forEach(table => table.classList.add('hidden'));
+
+                    // Показать нужную таблицу
+                    const dayId = this.getAttribute('data-day');
+                    const targetTable = document.getElementById(`${dayId}-schedule`);
+                    if (targetTable) {
+                        targetTable.classList.remove('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
